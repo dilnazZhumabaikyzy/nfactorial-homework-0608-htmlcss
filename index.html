@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body  >
+    <video autoplay muted loop id="myVideo" class="myVideo">
+        <source src="video/production ID_3913495.mp4" type="video/mp4">
+    </video>
+    <div id="blackOverlay" >
+        
+    </div>
+    <div class="main">
+        <audio id="myAudio" preload="metadata" >          
+            <source src="music/Hozier-Take-Me-To-Church-but-it-s-raining.m4a" type="audio/mpeg" >
+        </audio>
+        <div class="carousel">
+            <div class="leftPlayer noselect">
+              <div class="player">
+                <img src="./assets/disco.png" alt="" draggable="false" >
+                <div class="progressBar">
+                    <div class="lineDuration"></div>
+                 <div class="lineProgress"></div>
+                </div>
+                <div class="musicInfo">
+                    <h3 id="nameMusicL">Хочешь</h3>
+                 <h4 id="nameArtistL">Земфира</h4>
+                </div>
+                <div class="buttons">
+                    <button class="back"><img src="/assets/icons8-rewind-button-round-60.png" alt="" draggable="false"></button>
+                    <button ><img src="/assets/play-button.png" alt="" draggable="false"></button>
+                    <button class="forward"><img src="/assets/icons8-fast-forward-round-60.png" alt="" draggable="false"></button>
+                    <button class="pause"></button>
+                </div>
+                 <div class="volumeControl">
+                    <div class="volumeIcons">  <i class="fa-solid fa-volume-low"></i><i class="fa-solid fa-volume-high"></i></i></div>              
+                    <div class="lineMax"></div>
+                    <div class="lineControl"></div>                
+                 </div>
+              </div>
+            </div>
+            <div class="mainPlayer" id="mainPlayer">
+                <div class="player">
+                    <img src="./assets/disco.png"  alt="" id="discoImg"  draggable="false">
+                    <div class="progressBar noselect">
+                        <div class="lineDuration" id="lineDuration"></div>
+                        <div class="lineProgress" id="lineProgress"></div>
+                        <div id="pointP"></div>
+                        <div class="transparentLine" id="transparentLine"></div>
+                    </div>
+                    <div class="musicInfo noselect" >
+                        <h3 id="nameMusic">Take me to church</h3>
+                     <h4 id="nameArtist">Hozier</h4>
+                    </div> 
+                    <div class="buttons noselect">
+                        <button class="backBtn" id="backBtn" ><img src="/assets/icons8-rewind-button-round-60.png" alt="" draggable="false"></button>
+                        <button id="playBtn"><img src="/assets/play-button.png" alt=""  draggable="false"></button>
+                        <button id="pauseBtn" class="hide"><img src="assets/pause.png" alt=""  draggable="false"></button>
+                        <button class="forwardBtn" id="forwardBtn" draggable="false"><img src="/assets/icons8-fast-forward-round-60.png" alt=""  draggable="false"></button>
+                    </div>
+                     <div class="volumeControl noselect">
+                        <div class="volumeIcons">  <i class="fa-solid fa-volume-low"></i><i class="fa-solid fa-volume-high"></i></i></div>              
+                        <div class="lineMax"></div>
+                        <div class="lineControl" id="lineControl"></div>
+                        <div id="pointV"></div>
+                        <div class="volumeControlOverlay"id='volumeControlOverlay'></div>  
+                                      
+                     </div>
+                  </div>
+            </div>
+            <div class="rightPlayer noselect"><div class="player">
+                <img src="./assets/disco.png" alt="" draggable="false">
+                <div class="progressBar">
+                    <div class="lineDuration"></div>
+                 <div class="lineProgress"></div>
+                </div>
+                <div class="musicInfo">
+                    <h3 id="nameMusicR">Why’d you only call me when you’re high</h3>
+                 <h4 id="nameArtistR">Arctic monkeys</h4>
+                </div>
+                <div class="buttons">
+                    <button class="back"><img src="/assets/icons8-rewind-button-round-60.png" alt="" draggable="false"></button>
+                    <button class="play"><img src="/assets/play-button.png" alt="" draggable="false"></button>
+                    <button class="forward"><img src="/assets/icons8-fast-forward-round-60.png" alt="" draggable="false"></button>
+                    <button class="pause"></button>
+                </div>
+                 <div class="volumeControl">
+                    <div class="volumeIcons">  <i class="fa-solid fa-volume-low"></i><i class="fa-solid fa-volume-high"></i></i></div>              
+                    <div class="lineMax"></div>
+                    <div class="lineControl"></div>                
+                 </div>
+              </div></div>
+
+           
+
+            
+                       
+            </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

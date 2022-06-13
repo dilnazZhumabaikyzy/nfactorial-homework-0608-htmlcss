@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    align-items: center; 
+    font-family: p;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/background/0.jpg);
+}
+.carousel{
+    position: relative;
+    display: flex;
+}
+.mainPlayer{
+    z-index: 2;    
+    transition: all 1s linear;
+}
+.mainPlayer .player{
+   background-color: rgb(244, 244, 248);
+   opacity: 1;    
+}
+.leftPlayer{
+    margin-top: 20px;
+   margin-right: -120px;
+    z-index: 1;    
+}
+.rightPlayer{
+    margin-top: 20px;
+   margin-left: -120px;
+    z-index: 1;    
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+   
+}
+.player button img{
+     width: 50px;
+
+}
+.player{
+    opacity: 0.8;
+    width: 250px;
+    background: rgba(174, 160, 160, 0.455);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    box-shadow:  0px 5px 42px 2px rgba(34, 60, 80, 0.2);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.player img{
+    width: 200px;
+    transition: transform 0.1s linear;
+}
+.progressBar{
+    position: relative;
+    padding: 20px;
+    align-self: flex-start;
+    border-radius: 15px;
+   
+}
+.lineDuration{
+    border-radius: 15px;
+    position: absolute; 
+    background-color: rgb(204, 201, 201);
+    content: "";
+    width: 200px;
+    height: 5px;
+    
+}
+.transparentLine{
+    border-radius: 15px;
+    position: absolute; 
+    background-color: transparent;
+    content: "";
+    width: 200px;
+    height: 5px;    
+}
+.mainPlayer .lineProgress{
+    position: absolute; 
+    background-color: rgb(143, 141, 141);
+    content: "";
+    width: 0px;
+    height: 5px;
+    border-radius: 15px;
+}
+.volumeControl{
+    position: relative;
+    align-self: flex-start;
+    padding: 30px;    
+}
+.volumeIcons{
+    color: rgb(42, 41, 41);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.lineMax
+{
+    position: absolute;
+    background-color: rgb(175, 178, 178);
+    width: 154px;
+    height: 3px;
+    border-radius: 15px;
+    left: 50px;
+    top: 36px;
+    
+}
+.lineControl
+{
+    position: absolute;
+    background-color: rgb(140, 140, 140);
+    width: 100px;
+    height: 3px;
+    border-radius: 15px; 
+    
+    left: 50px;
+    top: 36px;
+}
+.volumeControlOverlay
+{
+    position: absolute;
+    background-color: transparent;
+    width: 154px;
+    height: 3px;
+    border-radius: 15px;     
+    left: 50px;
+    top: 36px;
+    cursor: pointer;
+    
+}
+
+
+.rotate {
+    animation: rotation 2s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+  
+    to {
+        transform: rotate(359deg);
+    }
+  }
+  .hide{
+    display: none;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+  .myVideo {
+    position: fixed;
+
+   opacity: 0;
+
+   min-width: 100%;
+   min-height: 100%;
+   
+    top: 0;
+    right: 0;
+    transition: all 0.3s linear;
+  }
+  .mainPlayer button:active {
+   opacity: 0.8;
+  }
+  
+  button{
+    outline: none;
+  }
+  img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.musicInfo{
+    width: 100%; 
+    opacity: 1; 
+    transition: opacity 0.2s ease-in-out;
+}
+ h3,h2{    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+#blackOverlay{
+    background-color: rgba(0, 0, 0, 0.472);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+#pointP{
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   background-color: rgb(143, 141, 141);
+   border-radius: 50%;
+   top: 17.7px;
+   left: 18px;
+   opacity: 0;   
+}
+#pointV{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color:  rgb(140, 140, 140);
+    border-radius: 50%;
+    top: 33.5px;
+    left: 50px;
+    opacity: 0;    
+ }
